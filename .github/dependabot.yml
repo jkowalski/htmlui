@@ -3,4 +3,13 @@ updates:
   - package-ecosystem: npm
     directory: "/"
     schedule:
-      interval: monthly
+      interval: weekly
+    groups:
+      common-golang-dependencies:
+        patterns:
+        - "*"
+  - package-ecosystem: github-actions
+    directory: "/"
+    open-pull-requests-limit: 3
+    schedule:
+      interval: weekly
